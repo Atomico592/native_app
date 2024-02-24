@@ -1,5 +1,5 @@
-import {FlatList, Image, SafeAreaView, StatusBar, View} from "react-native";
-import {SHADOWS, SIZES, assets, COLORS} from "../constants";
+import {FlatList, Image, SafeAreaView, StatusBar, View, Text} from "react-native";
+import {SHADOWS, SIZES, assets, COLORS, FONTS} from "../constants";
 import {CircleButton, DetailsBid, DetailsDesc, FocusedStatusBar, RectButton, SubInfo} from "../components";
 
 const DetailsHeader = ({data, navigation}) => (
@@ -62,8 +62,8 @@ const Details = ({route, navigation}) => {
                             />
                             {data.bids.length > 0 && (
                                 <Text style={{
+                                    fontFamily: FONTS.semiBold,
                                     fontSize: SIZES.font,
-                                    fontFamily: Font.semiBold,
                                     color: COLORS.primary
                                 }}>
                                     Current Bid
